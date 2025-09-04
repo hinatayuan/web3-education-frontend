@@ -814,6 +814,66 @@ body {
   opacity: 0.5;
 }
 
+/* 钱包地址容器样式修复 */
+.address-container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  width: 100%;
+}
+
+.address-container .address {
+  flex: 1;
+  margin: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.address-container .address:hover {
+  border-color: var(--primary-purple);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.address-actions {
+  display: flex;
+  gap: var(--space-xs);
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.address-action-btn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  border: 1px solid var(--gray-200);
+}
+
+.address-action-btn:hover {
+  background: var(--primary-purple);
+  color: white;
+  border-color: var(--primary-purple);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+[data-theme="dark"] .address-action-btn {
+  border-color: var(--gray-600);
+  background: var(--gray-700);
+}
+
+[data-theme="dark"] .address-action-btn:hover {
+  background: var(--primary-purple);
+  border-color: var(--primary-purple);
+}
+
 .edit-name {
   display: flex;
   gap: var(--space-sm);
@@ -3277,6 +3337,127 @@ body {
 
 .sort-select:focus + .sort-arrow {
   transform: rotate(180deg);
+}
+
+/* 合并的课程搜索和排序栏 */
+.courses-filter-bar {
+  background: var(--bg-primary);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-xl);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-xl);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+[data-theme="dark"] .courses-filter-bar {
+  border-color: var(--gray-700);
+}
+
+.courses-filter-bar .search-container {
+  flex: 1;
+  position: relative;
+  max-width: none;
+}
+
+.courses-filter-bar .sort-container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-shrink: 0;
+}
+
+.courses-filter-bar .sort-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.courses-filter-bar .sort-select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.courses-filter-bar .sort-select {
+  appearance: none;
+  background: var(--bg-primary);
+  border: 2px solid var(--gray-300);
+  border-radius: var(--radius-lg);
+  padding: var(--space-sm) 2.5rem var(--space-sm) var(--space-md);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+  min-width: 160px;
+}
+
+.courses-filter-bar .sort-select:hover {
+  border-color: var(--primary-purple);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.courses-filter-bar .sort-select:focus {
+  border-color: var(--primary-purple);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.courses-filter-bar .sort-arrow {
+  position: absolute;
+  right: var(--space-sm);
+  color: var(--text-tertiary);
+  pointer-events: none;
+  transition: transform 0.2s ease;
+}
+
+.courses-filter-bar .sort-select:hover + .sort-arrow {
+  color: var(--primary-purple);
+}
+
+.courses-filter-bar .sort-select:focus + .sort-arrow {
+  transform: rotate(180deg);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .courses-filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-md);
+  }
+  
+  .courses-filter-bar .search-container {
+    max-width: none;
+  }
+  
+  .courses-filter-bar .sort-container {
+    justify-content: center;
+    flex-direction: column;
+    gap: var(--space-xs);
+    text-align: center;
+  }
+  
+  .courses-filter-bar .sort-select {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .courses-filter-bar {
+    padding: var(--space-md);
+  }
+  
+  .courses-filter-bar .sort-select {
+    min-width: 180px;
+    font-size: 0.75rem;
+    padding: var(--space-xs) 2rem var(--space-xs) var(--space-sm);
+  }
 }
 
 /* 课程列表空状态优化 */

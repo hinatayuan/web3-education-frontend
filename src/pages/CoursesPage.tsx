@@ -17,8 +17,8 @@ export const CoursesPage = () => {
   return (
     <div className="courses-page">
       <div className="page-container">
-        {/* 课程搜索栏 */}
-        <div className="courses-search">
+        {/* 课程搜索和排序栏 */}
+        <div className="courses-filter-bar">
           <div className="search-container">
             <svg className="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <circle cx="11" cy="11" r="8"/>
@@ -32,12 +32,9 @@ export const CoursesPage = () => {
               className="search-input"
             />
           </div>
-        </div>
-
-        {/* 排序栏 */}
-        <div className="courses-sort">
-          <div className="sort-section">
-            <label htmlFor="sort-select" className="sort-label">排序方式：</label>
+          
+          <div className="sort-container">
+            <label htmlFor="sort-select" className="sort-label">排序：</label>
             <div className="sort-select-wrapper">
               <select 
                 id="sort-select"
