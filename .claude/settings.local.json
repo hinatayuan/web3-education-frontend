@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(npm run dev:*)",
+      "WebFetch(domain:yearn.fi)",
+      "Bash(tree:*)",
+      "Read(/Users/liuweiyuan/Documents/front-end/yideng33期/**)",
+      "Read(/Users/liuweiyuan/Documents/front-end/yideng33期/web3-education-hardhat/**)",
+      "Read(/Users/liuweiyuan/Documents/front-end/yideng33期/web3-education-hardhat/contracts/**)",
+      "Read(/Users/liuweiyuan/Documents/front-end/yideng33期/web3-education-hardhat/contracts/**)",
+      "Read(/Users/liuweiyuan/Documents/front-end/yideng33期/web3-education-hardhat/contracts/libraries/**)",
+      "Read(/Users/liuweiyuan/Documents/front-end/yideng33期/web3-education-hardhat/**)",
+      "Read(/Users/liuweiyuan/Documents/front-end/yideng33期/web3-education-hardhat/ignition/modules/**)",
+      "Read(/Users/liuweiyuan/Documents/front-end/yideng33期/web3-education-hardhat/contracts/**)",
+      "Bash(npm run build:*)",
+      "Read(/Users/liuweiyuan/Documents/front-end/yideng33期/web3-education-hardhat/ignition/modules/**)",
+      "Read(/Users/liuweiyuan/Documents/front-end/yideng33期/web3-education-hardhat/**)",
+      "Read(/Users/liuweiyuan/Documents/front-end/yideng33期/web3-education-hardhat/contracts/**)",
+      "Read(/Users/liuweiyuan/Documents/front-end/yideng33期/web3-education-hardhat/**)",
+      "Read(/Users/liuweiyuan/Documents/front-end/yideng33期/web3-education-hardhat/contracts/**)",
+      "Read(/Users/liuweiyuan/Documents/front-end/yideng33期/web3-education-hardhat/contracts/**)",
+      "WebSearch",
+      "WebFetch(domain:ethereum.stackexchange.com)",
+      "WebFetch(domain:uniswap.org)",
+      "WebFetch(domain:app.uniswap.org)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
