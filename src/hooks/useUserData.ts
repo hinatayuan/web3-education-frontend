@@ -125,10 +125,13 @@ export const useUserData = () => {
   // 添加已购买课程
   const addPurchasedCourse = (courseId: string) => {
     if (!address || !userData) return
+    
+    // 检查是否已经购买过该课程，避免重复添加
+    if (userData.purchasedCourses.includes(courseId)) return
 
     const updatedData = {
       ...userData,
-      purchasedCourses: [...new Set([...userData.purchasedCourses, courseId])]
+      purchasedCourses: [...userData.purchasedCourses, courseId]
     }
 
     const storedData = localStorage.getItem(STORAGE_KEY)
