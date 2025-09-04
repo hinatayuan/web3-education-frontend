@@ -7,10 +7,6 @@ export const CreatorCourseList = () => {
   const { address } = useAccount()
   const { allCourseIds } = useCourseData()
 
-  // 先获取所有课程数据，然后再过滤
-  const allCourses = useMemo(() => {
-    return allCourseIds.map(courseId => ({ courseId, course: null }))
-  }, [allCourseIds])
 
   // 过滤出当前用户创建的课程（只显示courseId，具体数据在子组件中获取）
   const creatorCourseIds = useMemo(() => {

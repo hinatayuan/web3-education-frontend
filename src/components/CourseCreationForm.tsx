@@ -36,12 +36,6 @@ export const CourseCreationForm = () => {
     }
   }, [address, generatedCourseId])
 
-  // 重新生成课程ID的函数
-  const regenerateCourseId = () => {
-    if (address) {
-      setGeneratedCourseId(generateCourseId())
-    }
-  }
 
   const validateForm = () => {
     const newErrors: Record<string, string> = {}

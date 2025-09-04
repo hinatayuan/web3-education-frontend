@@ -62,9 +62,6 @@ export const ExchangeRecords = () => {
     return new Date(timestamp).toLocaleString('zh-CN')
   }
 
-  const shortenAddress = (address: string) => {
-    return `${address.slice(0, 6)}...${address.slice(-4)}`
-  }
 
   const shortenHash = (hash: string) => {
     return `${hash.slice(0, 10)}...${hash.slice(-8)}`
